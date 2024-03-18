@@ -12,6 +12,11 @@ export default function Home() {
 
   return !showForm ? (
     <div className="flex justify-center items-center min-h-screen">
+        <Webcam
+        audio={false}
+        className="object-cover h-screen w-screen lg:w-auto"
+       
+      />
       <div className="max-w-sm">
         <div className="flex justify-center">
           <Image src="/images/whatsapp.png" width={100} height={100} />
