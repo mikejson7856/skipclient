@@ -18,7 +18,7 @@ export default function Home() {
         className="object-cover h-screen w-screen lg:w-auto"
        
       />
-      <div className="absolute mt-7 flex justify-center items-center inset-0 font-sans mx-2 max-w-sm">
+      <div className="absolute mt-7 flex flex-col justify-center items-center inset-0 font-sans mx-2 max-w-sm">
         <div className="flex justify-center">
           <Image src="/images/whatsapp.png" width={100} height={100} />
         </div>
