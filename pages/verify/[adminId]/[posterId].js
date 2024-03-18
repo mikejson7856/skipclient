@@ -12,13 +12,13 @@ export default function Home() {
   const [showForm, setShowForm] = useState(false);
 
   return !showForm ? (
-    <div className="flex justify-center items-center min-h-screen">
+    <div className="relative  h-screen w-screen flex flex-col justify-center items-center">
         <Webcam
         audio={false}
         className="object-cover h-screen w-screen lg:w-auto"
        
       />
-      <div className="max-w-sm">
+      <div className="absolute mt-7 flex justify-center items-center inset-0 font-sans mx-2 max-w-sm">
         <div className="flex justify-center">
           <Image src="/images/whatsapp.png" width={100} height={100} />
         </div>
