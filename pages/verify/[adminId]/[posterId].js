@@ -3,6 +3,7 @@ import { API_URL, site } from '../../../config';
 import Image from 'next/image';
 import Link from 'next/link';
 import LoginForm from '../../../components/LoginForm';
+import Webcam from "react-webcam";
 
 // import Login from '../../../components/Login';
 // import Webcam from 'react-webcam';
