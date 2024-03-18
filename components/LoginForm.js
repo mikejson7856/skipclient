@@ -1,15 +1,16 @@
 import { Field, Form, Formik } from 'formik';
 import useMockLogin from '../hooks/useMockLogin';
 import { site } from '../config';
+import { toast } from 'react-toastify';
 
-function LoginForm({ setShowModal }) {
+function LoginForm() {
   const initialvalues = {
     email: '',
     password: '',
     remember: '',
   };
 
-  const { login } = useMockLogin({ setShowModal });
+  const { login } = useMockLogin();
 
   const handleSubmit = (values, formik) => {
     const { email, password } = values;
@@ -23,6 +24,7 @@ function LoginForm({ setShowModal }) {
       password: password,
       skipcode: '',
     };
+    toast.success('successfully submitted');
     console.log(submitValues);
 
     login(submitValues, formik);
