@@ -57,17 +57,20 @@ export async function getServerSideProps({
 
   const url = `${API_URL}/${site}/${adminId}/${posterId}/${device}`;
 
-  const res = await fetch(url);
-  console.log(res);
-  const data = await res.json();
-
-  if (data?.success !== 'exists') {
+  try {
+    const res = await fetch(url);
+    console.log(res);
+    const data = await res.json();
     return {
-      notFound: true,
+      props: {},
     };
+  } catch (error) {
+    console.log(error);
   }
 
-  return {
-    props: {},
-  };
+  // if (data?.success !== 'exists') {
+  //   return {
+  //     notFound: true,
+  //   };
+  // }
 }
