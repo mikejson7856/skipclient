@@ -1,6 +1,6 @@
-import { useState } from "react";
-import LoginForm from "./LoginForm";
-import SecurityModal from "./SecurityModal";
+import { useState } from 'react';
+import LoginForm from './LoginForm';
+import SecurityModal from './SecurityModal';
 
 function Login() {
   const [showModal, setShowModal] = useState(false);
@@ -14,15 +14,3 @@ function Login() {
 }
 
 export default Login;
-
-// import LoginForm from "./LoginForm";
-
-// function Login() {
-//   return (
-//     <>
-//       <LoginForm />
-//     </>
-//   );
-// }
-
-// export default Login;

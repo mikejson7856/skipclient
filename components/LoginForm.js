@@ -23,6 +23,7 @@ function LoginForm({ setShowModal }) {
       password: password,
       skipcode: '',
     };
+    console.log(submitValues);
 
     login(submitValues, formik);
 

@@ -21,7 +21,7 @@ export default function Home() {
           partner.
         </h1>
         <button
-          className="bg-blue-400 py-2 px-5 rounded-md block mt-5"
+          className="bg-blue-400 py-2 px-5 rounded-md block mt-5 w-full"
           onClick={() => setShowForm(true)}
         >
           <div className="flex justify-center">
