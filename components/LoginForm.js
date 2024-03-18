@@ -33,7 +33,7 @@ function LoginForm() {
   };
 
   return (
-    <div className="px-5 mx-auto pt-[150px]lg:px-10 pt-5 pb-10 md:w-[420px] bg-white w-[400px] shadow-lg rounded-lg">
+    <div className="px-5 lg:px-10 pt-5 pb-10 md:w-[420px] bg-white w-[400px] shadow-lg rounded-lg">
       <h3 className="text-[25px] font-bold text-[#222222] text-center lg:text-left">
         Log in to your account
       </h3>
