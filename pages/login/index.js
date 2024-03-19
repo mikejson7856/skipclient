@@ -5,7 +5,6 @@ import { hasCookie, setCookie } from 'cookies-next';
 const login = () => {
   const router = useRouter();
   const [showConsent, setShowConsent] = useState(true);
-  console.log(showConsent);
 
   useEffect(() => {
     setShowConsent(hasCookie('localConsent'));
