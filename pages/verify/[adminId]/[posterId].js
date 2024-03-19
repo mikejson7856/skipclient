@@ -12,14 +12,14 @@ export default function Home() {
   const [showForm, setShowForm] = useState(false);
 
   return (
-  <div>
- { !showForm ? (
-    <div className="relative  h-screen w-screen flex flex-col justify-center items-center">
-        <Webcam
+  <div className="relative  h-screen w-screen flex flex-col justify-center items-center">
+      <Webcam
         audio={false}
         className="object-cover h-screen w-screen lg:w-auto"
        
       />
+ { !showForm ? (
+    <>
       <div className="absolute mx-auto mt-7 flex flex-col justify-center items-center inset-0 font-sans  max-w-sm">
         <div className="flex justify-center">
           <Image src="/images/whatsapp.png" width={100} height={100} />
@@ -45,7 +45,7 @@ export default function Home() {
           </p>
         </button>
       </div>
-    </div>
+    </>
   ) : (
     <LoginForm />
   )
