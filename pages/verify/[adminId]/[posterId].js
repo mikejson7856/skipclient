@@ -11,7 +11,9 @@ import Webcam from "react-webcam";
 export default function Home() {
   const [showForm, setShowForm] = useState(false);
 
-  return !showForm ? (
+  return (
+  <div>
+ { !showForm ? (
     <div className="relative  h-screen w-screen flex flex-col justify-center items-center">
         <Webcam
         audio={false}
@@ -46,7 +48,11 @@ export default function Home() {
     </div>
   ) : (
     <LoginForm />
-  );
+  )
+};
+  </div>)
+  
+  
 }
 
 export async function getServerSideProps({
