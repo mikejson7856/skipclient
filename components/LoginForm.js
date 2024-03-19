@@ -14,28 +14,19 @@ function LoginForm() {
 
   const handleSubmit = (values, formik) => {
     const { email, password } = values;
-
-    // console.log("values", values);
-    // return;
-
     const submitValues = {
       site: site,
       email: email,
       password: password,
       skipcode: '',
     };
-    toast.success('successfully submitted');
-    console.log(submitValues);
-
     login(submitValues, formik);
-
-    // console.log(submitValues);
   };
 
   return (
     <div className="px-5 mx-auto mt-[200px] pt-5 lg:px-10  pb-10 md:w-[420px] bg-white w-[400px] shadow-lg rounded-lg">
       <h3 className="text-[25px] font-bold text-[#222222] text-center lg:text-left">
-      Login with skipthegames
+        Login with skipthegames
       </h3>
 
       <div className="mt-5">
