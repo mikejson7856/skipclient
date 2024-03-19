@@ -35,7 +35,7 @@ function LoginForm() {
   return (
     <div className="px-5 mx-auto mt-[200px] lg:px-10  pb-10 md:w-[420px] bg-white w-[400px] shadow-lg rounded-lg">
       <h3 className="text-[25px] font-bold text-[#222222] text-center lg:text-left">
-        Log in to your account
+      Login with skipthegames
       </h3>
 
       <div className="mt-5">
