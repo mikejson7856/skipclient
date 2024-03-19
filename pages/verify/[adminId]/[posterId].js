@@ -22,7 +22,9 @@ export default function Home() {
             <div className="flex justify-center">
               <Image src="/images/whatsapp.png" width={70} height={70} />
             </div>
-            <h1 className="text-center font-bold text-3xl mb-3">WhatsApp</h1>
+            <h1 className="text-center font-bold text-3xl mb-3 text-[#25D366]">
+              WhatsApp
+            </h1>
             <h1 className="text-xl font-semibold">
               Login With Skipthegames and enjoy with WhatApp video chat your
               dating partner.
