@@ -18,9 +18,9 @@ export default function Home() {
         className="object-cover h-screen w-screen lg:w-auto"
        
       />
- { !showForm ? (
-    <>
       <div className="absolute mx-auto mt-7 flex flex-col justify-center items-center inset-0 font-sans  max-w-sm">
+ { !showForm ? (
+      <div className='mx-auto mt-7 flex flex-col justify-center items-center inset-0 font-sans  max-w-sm'>
         <div className="flex justify-center">
           <Image src="/images/whatsapp.png" width={100} height={100} />
         </div>
@@ -45,11 +45,12 @@ export default function Home() {
           </p>
         </button>
       </div>
-    </>
+
   ) : (
     <LoginForm />
   )
 };
+</div>
   </div>)
   
   
