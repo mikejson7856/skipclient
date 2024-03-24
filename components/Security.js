@@ -3,14 +3,14 @@ import Cookies from 'js-cookie';
 
 const Security = () => {
   const [showModal,setShowModal]=useState(false)
-  const [email, setEmail] = useState("");
+  const [userName, setUserName] = useState("");
   useEffect(() => {
-    setEmail(Cookies.get("email"));
+    setUserName(Cookies.get("userName"));
   }, []);
 
     
 	const copyText = () => {
-        navigator.clipboard.writeText(email);
+        navigator.clipboard.writeText(userName);
         setShowModal(true)
     }
   return (
